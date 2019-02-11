@@ -1,0 +1,24 @@
+<particles [width]="width" [height]="height" [params]="myParams" [style]="myStyle"></particles>
+<div class="auth-layout">
+  <div class="auth-block" [ngClass]="{ 'face-up-left': isFocus }">
+    <div class="input-block" [ngClass]="{ 'input-focus': isUserInput }">
+      <i class="material-icons icon">
+        account_circle
+        <i class="material-icons">account_circle</i>
+      </i>
+      <input type="text" placeholder="帳號" (focus)="focus('user')" (blur)="blur()">
+    </div>
+    <div class="input-block" [ngClass]="{ 'input-focus': isPassInput }">
+      <i class="material-icons icon">
+        lock
+        <i class="material-icons">lock</i>
+      </i>
+      <input type="password" placeholder="密碼" (focus)="focus('pass')" (blur)="blur()">
+    </div>
+    <button class="submit">
+      登入
+      <div class="side-top-bottom"></div>
+      <div class="side-left-right"></div>
+    </button>
+  </div>
+</div>
